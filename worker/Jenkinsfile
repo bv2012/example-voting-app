@@ -1,6 +1,6 @@
 pipeline{
     agent none
-    
+
 
     stages{
         stage('build'){
@@ -88,4 +88,5 @@ pipeline{
             echo 'the job is complete'
         }
     }
+  }
 }
