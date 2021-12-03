@@ -1,19 +1,16 @@
 pipeline {
-
   agent none
   stages{
       stage("build"){
         when{
             changeset "**/result/**"
           }
-
         agent {
           docker {
             image 'node:8.9.0'
 
           }
         }
-
         steps{
           echo 'Compiling result app..'
           dir('result'){
@@ -40,8 +37,6 @@ pipeline {
 
           }
       }
-      
-      
   }
 
   post{
