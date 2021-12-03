@@ -1,5 +1,4 @@
 pipeline {
-
   agent none
   stages{
       stage("build"){
@@ -13,7 +12,6 @@ pipeline {
             
           }
         }
-
         steps{
           echo 'Compiling vote app..'
           dir('vote'){
