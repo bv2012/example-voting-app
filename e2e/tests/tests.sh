@@ -31,7 +31,7 @@ new=`phantomjs render.js "http://result:4000/" | grep -i vote | cut -d ">" -f 4 
 
 echo -e "I: Checking if votes tally......\n"
 
-if [ "$next" = "$new" ]; then
+if [ "$next" == "$new" ]; then
   echo -e "\\e[42m------------"
   echo -e "\\e[92mTests passed"
   echo -e "\\e[42m------------"
